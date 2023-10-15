@@ -1,0 +1,72 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        body {
+            background-color: #333;
+            color: #fff;
+            font-family: Arial, sans-serif;
+        }
+        .navbar {
+            overflow: hidden;
+            background-color: #222;
+        }
+        .navbar a {
+            float: left;
+            display: block;
+            color: #f2f2f2;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+        .page {
+            display: none;
+            margin: 5% 10%;
+        }
+        img {
+            width: 200px;
+            height: 200px;
+        }
+    </style>
+    <script>
+        function navigate(pageId) {
+            var pages = document.getElementsByClassName('page');
+            for (var i = 0; i < pages.length; i++) {
+                pages[i].style.display = 'none';
+            }
+            document.getElementById(pageId).style.display = 'block';
+        }
+    </script>
+</head>
+<body>
+
+<div class="navbar">
+<a href="#" onclick="navigate('Main Page')"> Main </a>
+  <a href="#" onclick="navigate('resume')">Resume</a>
+  <a href="#" onclick="navigate('projects')">Projects</a>
+  <a href="#" onclick="navigate('contact')">Contact</a>
+</div>
+
+<div id="Main Page" class="page" style="display:block;">
+  <h1>Zachary Capone</h1>
+  <img src="Hobbes.jpg" alt="Your Picture">
+  <p>Hello world??</p>
+</div>
+
+<div id="resume" class="page">
+  <h2>Resume</h2>
+  <p>resume</p>
+</div>
+
+<div id="projects" class="page">
+  <h2>Projects</h2>
+  <p>projects</p>
+</div>
+
+<div id="contact" class="page">
+  <h2>Contact Information</h2>
+  <p>214-218-6753</p>
+</div>
+
+</body>
+</html>
